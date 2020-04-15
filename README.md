@@ -9,6 +9,8 @@
 Псевдо-бд лежит в \src\json_server\db.json
 Ее запуск -> json.server db.json
 
+Логины и пароли можно посмотреть/добавить/удалить в db.json.
+
 ``` bash
 # install dependencies
 npm install
