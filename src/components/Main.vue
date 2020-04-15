@@ -112,7 +112,7 @@
   .post-item_fix-width {
     width: 620px;
     max-width: 100%;
-    min-width: 320px;
+    min-width: calc(100% - 32px);
   }
 
   .post-item_fix-width {
