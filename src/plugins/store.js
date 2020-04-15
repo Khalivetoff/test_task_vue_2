@@ -9,7 +9,18 @@ export const store = new Vuex.Store({
     local_address: 'http://' + window.location.hostname + ':3000',
     posts: [],
     data_is_ready: false,
-    user_data: {},
+    user_data: {
+      id: null,
+      login: '',
+      password: '',
+      role: ''
+    },
+    user_data_empty: {
+      id: null,
+      login: '',
+      password: '',
+      role: ''
+    },
     edit_post: {
       id: null,
       title: '',
@@ -35,7 +46,7 @@ export const store = new Vuex.Store({
       state.user_data = val;
     },
     resetUserData(state) {
-      state.user_data = {};
+      state.user_data = JSON.parse(JSON.stringify(state.user_data_empty));
       localStorage.removeItem('user_data');
     },
     setDateNow(state, val) {

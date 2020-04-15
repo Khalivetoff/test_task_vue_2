@@ -74,12 +74,12 @@
         },
         methods: {
             enter() {
-                this.$store.state.user_data.id ? this.$store.commit('resetUserData') : this.$router.push({name: 'auth'});
+                this.$store.state.user_data.id !== null ? this.$store.commit('resetUserData') : this.$router.push({name: 'auth'});
             }
         },
         computed: {
             button_text() {
-                if (this.$store.state.user_data.id) {
+                if (this.$store.state.user_data.id !== null) {
                     return 'Выйти';
                 } else {
                     return 'Логин';
